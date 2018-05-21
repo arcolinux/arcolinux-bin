@@ -33,7 +33,7 @@ Monitor=$(awk < /var/log/Xorg.0.log '/Display/{print $6,$7}'|tr -d '()'|sed -n '
  echo "   SYSTEM INFORMATION"
  echo "   --------------------"
  echo  ""
- echo -e "\e[91m     ERIK"
+ echo -e "\e[91m     $USER"
  echo -e "\e[94m     \e[39m$MODEL"
  echo -e "\e[94m     \e[39m$OS $ARCH"
  echo -e "\e[94m     \e[39m$KERNEL"
