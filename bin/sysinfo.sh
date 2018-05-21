@@ -25,7 +25,6 @@ GtkFont=$(awk < ~/.gtkrc-2.0 -F'"' '/gtk-font-name/{print $2}')
 
 Packages=$(checkupdates | wc -l)
 Layout=$(setxkbmap -print | awk -F"+" '/xkb_symbols/{for ( i=1; i <= NF; i++) sub(".", substr(toupper($i),1,1) , $i); print $2}')
-Monitor=$(awk < /var/log/Xorg.0.log '/Display/{print $6,$7}'|tr -d '()'|sed -n '1p')
 
 
  echo  ""
@@ -51,5 +50,4 @@ Monitor=$(awk < /var/log/Xorg.0.log '/Display/{print $6,$7}'|tr -d '()'|sed -n '
  echo -e "\e[91m   --------------------"
  echo -e "\e[91m     \e[31m$Packages"
  echo -e "\e[94m     \e[39m$Layout"
- echo -e "\e[94m     \e[39m$Monitor"
  echo  ""
