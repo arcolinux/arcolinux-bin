@@ -8,6 +8,7 @@
 OS=$(cat /etc/lsb-release | awk -F '=' '/DISTRIB_ID/ {print $2}')
 KERNEL=$(uname -r)
 ARCH=$(uname -m)
+VERSION=$(cat /etc/lsb-release | awk -F '=' '/DISTRIB_RELEASE/ {print $2}')
 UPTIME=$(awk '{printf("%d:%02d:%02d:%02d",($1/60/60/24),($1/60/60%24),($1/60%60),($1%60))}' /proc/uptime)
 MODEL=$(cat /sys/devices/virtual/dmi/id/board_{name,vendor} | awk '!(NR%2){print$1,p}{p=$0}')
 DE=$(wmctrl -m | awk 'NR==1 {print $2}' | perl -nle 'print ucfirst lc')
@@ -34,7 +35,7 @@ Layout=$(setxkbmap -print | awk -F"+" '/xkb_symbols/{for ( i=1; i <= NF; i++) su
  echo  ""
  echo -e "\e[91m     $USER"
  echo -e "\e[94m     \e[39m$MODEL"
- echo -e "\e[94m     \e[39m$OS $ARCH"
+ echo -e "\e[94m     \e[39m$OS $ARCH $VERSION"
  echo -e "\e[94m     \e[39m$KERNEL"
  echo -e "\e[94m     \e[39m$UPTIME"
  echo -e "\e[94m     \e[39m$SHELL"
