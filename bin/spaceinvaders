@@ -36,5 +36,3 @@ cat << EOF
                               $f7▀▀▀▀▀▀▀▀▀▀▀$rst
 
 EOF
-
-$SHELL
