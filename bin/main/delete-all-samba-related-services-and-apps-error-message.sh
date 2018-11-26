@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 ##################################################################################################################
 # Author	:	Erik Dubois
 # Website	:	https://www.erikdubois.be
@@ -32,8 +32,8 @@ echo "################################################################"
 echo "Deleting ArcoLinux config files"
 echo "################################################################"
 
-sudo rm -r /etc/samba/smb.conf
-sudo rm -r /etc/samba/smb.conf.orginal
+sudo rm  /etc/samba/smb.conf
+sudo rm  /etc/samba/smb.conf.orginal
 
 echo "################################################################"
 echo "###  Samba and all related packages and services are gone   ####"
