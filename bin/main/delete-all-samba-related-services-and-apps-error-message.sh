@@ -26,9 +26,7 @@ echo "Uninstalling packages"
 echo "################################################################"
 
 sudo pacman -R samba
-#sudo pacman -R avahi
 sudo pacman -R nss-mdns
-sudo pacman -R gvfs-samba
 
 echo "################################################################"
 echo "Deleting ArcoLinux config files"
