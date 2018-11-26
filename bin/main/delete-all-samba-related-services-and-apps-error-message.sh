@@ -29,18 +29,12 @@ sudo pacman -R samba
 sudo pacman -R nss-mdns
 
 echo "################################################################"
-echo "Deleting ArcoLinux config files"
+echo "Renaming ArcoLinux smb.conf file"
 echo "################################################################"
 
 if [ -f /etc/samba/smb.conf ]; then
-  sudo rm /etc/samba/smb.conf
+  sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.arcolinux
 fi
-
-if [ -f /etc/samba/smb.conf.original ]; then
-  sudo rm /etc/samba/smb.conf.original
-fi
-
-
 
 echo "################################################################"
 echo "###  Samba and all related packages and services are gone   ####"
