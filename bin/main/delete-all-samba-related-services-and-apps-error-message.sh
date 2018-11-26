@@ -32,8 +32,15 @@ echo "################################################################"
 echo "Deleting ArcoLinux config files"
 echo "################################################################"
 
-sudo rm  /etc/samba/smb.conf
-sudo rm  /etc/samba/smb.conf.orginal
+if [ -f /etc/samba/smb.conf ]; then
+  sudo rm  /etc/samba/smb.conf
+fi
+
+if [ -f /etc/samba/smb.conf ]; then
+  sudo rm  /etc/samba/smb.conf.orginal
+fi
+
+
 
 echo "################################################################"
 echo "###  Samba and all related packages and services are gone   ####"
