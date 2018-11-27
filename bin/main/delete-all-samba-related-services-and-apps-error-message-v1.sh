@@ -25,7 +25,7 @@ echo "################################################################"
 echo "Uninstalling packages"
 echo "################################################################"
 
-sudo pacman -R samba smbclient libwbclient cifs-utils
+sudo pacman -R samba smbclient libwbclient cifs-utils gvfs-smb
 sudo pacman -R nss-mdns
 
 echo "################################################################"
