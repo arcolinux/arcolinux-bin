@@ -25,8 +25,8 @@ echo "################################################################"
 echo "Uninstalling packages"
 echo "################################################################"
 
-sudo pacman -R samba smbclient libwbclient cifs-utils gvfs-smb
-sudo pacman -R nss-mdns
+sudo pacman -Rs samba smbclient libwbclient cifs-utils gvfs-smb
+sudo pacman -Rs nss-mdns
 
 echo "################################################################"
 echo "Renaming ArcoLinux smb.conf file"
