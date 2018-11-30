@@ -20,7 +20,7 @@ echo "But as from now we can manage these files with pacman and update them."
 
 echo "First we update to get the new package in our database"
 
-sudo pacman -Syyu
+sudo pacman -Syy
 
 sudo rm /etc/modprobe.d/disable-evbug.conf
 sudo rm /etc/modprobe.d/nobeep.conf
