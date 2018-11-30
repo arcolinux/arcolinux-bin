@@ -37,7 +37,11 @@ sudo rm /usr/share/applications/arcolinux-hello.desktop
 sudo rm /usr/share/icons/hicolor/256x256/apps/arco-calamares-logo.png
 sudo rm /usr/share/icons/hicolor/256x256/apps/distributor-logo-arcolinux.svg
 
+sudo rm /usr/bin/arcolinux-virtual-machine-check
 
+sudo rm /etc/systemd/system/reflector.service
+sudo rm /etc/systemd/system/reflector.timer
+sudo rm /etc/systemd/system/virtual-machine-check.service
 
 sudo pacman -S arcolinux-system-config-git --noconfirm
 
