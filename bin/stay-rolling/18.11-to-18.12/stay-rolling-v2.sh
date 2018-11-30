@@ -34,8 +34,6 @@ sudo rm /etc/X11/xorg.conf.d/99-killX.conf
 
 sudo rm /usr/share/applications/arcolinux-hello.desktop
 
-sudo rm /usr/share/icons/default/index.theme
-
 sudo rm /usr/share/icons/hicolor/256x256/apps/arco-calamares-logo.png
 sudo rm /usr/share/icons/hicolor/256x256/apps/distributor-logo-arcolinux.svg
 
