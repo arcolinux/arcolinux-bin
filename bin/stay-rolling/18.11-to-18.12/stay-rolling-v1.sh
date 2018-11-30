@@ -41,7 +41,7 @@ sudo rm /usr/share/icons/hicolor/256x256/apps/distributor-logo-arcolinux.svg
 
 
 
-sudo pacman -S arcolinux-system-config-git --noconfirm --needed
+sudo pacman -S arcolinux-system-config-git --noconfirm
 
 
 echo "################################################################"
