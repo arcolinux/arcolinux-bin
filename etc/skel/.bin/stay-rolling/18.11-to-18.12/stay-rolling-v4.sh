@@ -22,26 +22,57 @@ echo "First we update to get the new package in our database"
 
 sudo pacman -Syy
 
-sudo rm /etc/modprobe.d/disable-evbug.conf
-sudo rm /etc/modprobe.d/nobeep.conf
-sudo rm /etc/modprobe.d/snd_pcsp.conf
+if [ -f /etc/modprobe.d/disable-evbug.conf ]; then
+  sudo rm /etc/modprobe.d/disable-evbug.conf
+fi
 
-sudo rm /etc/sysctl.d/99-sysctl.conf
+if [ -f /etc/modprobe.d/nobeep.conf ]; then
+  sudo rm /etc/modprobe.d/nobeep.conf
+fi
 
-sudo rm /etc/udev/rules.d/60-ioschedulers.rules
+if [ -f /etc/modprobe.d/snd_pcsp.conf ]; then
+  sudo rm /etc/modprobe.d/snd_pcsp.conf
+fi
 
-sudo rm /etc/X11/xorg.conf.d/99-killX.conf
+if [ -f /etc/sysctl.d/99-sysctl.conf ]; then
+  sudo rm /etc/sysctl.d/99-sysctl.conf
+fi
 
-sudo rm /usr/share/applications/arcolinux-hello.desktop
+if [ -f /etc/udev/rules.d/60-ioschedulers.rules ]; then
+  sudo rm /etc/udev/rules.d/60-ioschedulers.rules
+fi
 
-sudo rm /usr/share/icons/hicolor/256x256/apps/arco-calamares-logo.png
-sudo rm /usr/share/icons/hicolor/256x256/apps/distributor-logo-arcolinux.svg
+if [ -f /etc/X11/xorg.conf.d/99-killX.conf ]; then
+  sudo rm /etc/X11/xorg.conf.d/99-killX.conf
+fi
 
-sudo rm /usr/bin/arcolinux-virtual-machine-check
+if [ -f /usr/share/applications/arcolinux-hello.desktop ]; then
+  sudo rm /usr/share/applications/arcolinux-hello.desktop
+fi
 
-sudo rm /etc/systemd/system/reflector.service
-sudo rm /etc/systemd/system/reflector.timer
-sudo rm /etc/systemd/system/virtual-machine-check.service
+if [ -f /usr/share/icons/hicolor/256x256/apps/arco-calamares-logo.png ]; then
+  sudo rm /usr/share/icons/hicolor/256x256/apps/arco-calamares-logo.png
+fi
+
+if [ -f /usr/share/icons/hicolor/256x256/apps/distributor-logo-arcolinux.svg ]; then
+  sudo rm /usr/share/icons/hicolor/256x256/apps/distributor-logo-arcolinux.svg
+fi
+
+if [ -f /usr/bin/arcolinux-virtual-machine-check ]; then
+  sudo rm /usr/bin/arcolinux-virtual-machine-check
+fi
+
+if [ -f /etc/systemd/system/reflector.service ]; then
+  sudo rm /etc/systemd/system/reflector.service
+fi
+
+if [ -f /etc/systemd/system/reflector.timer ]; then
+  sudo rm /etc/systemd/system/reflector.timer
+fi
+
+if [ -f /etc/systemd/system/virtual-machine-check.service ]; then
+  sudo rm /etc/systemd/system/virtual-machine-check.service
+fi
 
 sudo pacman -S arcolinux-system-config-git --noconfirm
 
