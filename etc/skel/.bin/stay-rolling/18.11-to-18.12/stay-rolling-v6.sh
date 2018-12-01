@@ -74,6 +74,14 @@ if [ -f /etc/systemd/system/virtual-machine-check.service ]; then
   sudo rm /etc/systemd/system/virtual-machine-check.service
 fi
 
+if [ -f /etc/samba/smb.conf.arcolinux ]; then
+  sudo rm /etc/samba/smb.conf.arcolinux
+fi
+
+if [ -f /etc/samba/smb.conf.original ]; then
+  sudo rm /etc/samba/smb.conf.original
+fi
+
 sudo pacman -S arcolinux-system-config-git --noconfirm
 
 
