@@ -22,6 +22,8 @@ echo "First we update to get the new package in our database"
 
 sudo pacman -Syy
 
+sudo pacman -S arcolinux-bin-git --noconfirm
+
 if [ -f /etc/modprobe.d/disable-evbug.conf ]; then
   sudo rm /etc/modprobe.d/disable-evbug.conf
 fi
