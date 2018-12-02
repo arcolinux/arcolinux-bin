@@ -92,9 +92,8 @@ if [ -f /etc/polkit-1/rules.d ]; then
   sudo chmod 750 /etc/polkit-1/rules.d
 fi
 
-if [ -f /etc/polkit-1/rules.d ]; then
-  chgrp polkitd /etc/polkit-1/rules.d
-fi
+sudo chgrp polkitd /etc/polkit-1/rules.d
+
 
 sudo pacman -S arcolinux-system-config-git --noconfirm
 
