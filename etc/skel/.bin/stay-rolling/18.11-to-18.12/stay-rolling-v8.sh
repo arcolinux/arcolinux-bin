@@ -84,6 +84,18 @@ if [ -f /etc/samba/smb.conf.original ]; then
   sudo rm /etc/samba/smb.conf.original
 fi
 
+if [ -f /etc/sudoers.d ]; then
+  sudo chmod 750 /etc/sudoers.d
+fi
+
+if [ -f /etc/polkit-1/rules.d ]; then
+  sudo chmod 750 /etc/polkit-1/rules.d
+fi
+
+if [ -f /etc/polkit-1/rules.d ]; then
+  chgrp polkitd /etc/polkit-1/rules.d
+fi
+
 sudo pacman -S arcolinux-system-config-git --noconfirm
 
 
