@@ -26,11 +26,9 @@ echo "INSTALLATIONS"
 echo "#############################"
 echo "We have installed these packages on the iso :"
 echo
-echo "- tree"
 echo "- redshift"
 echo "- the_platinum_searcher-bin"
 
-sudo pacman -S tree
 sudo pacman -S redshift
 yay -S the_platinum_searcher-bin
 
