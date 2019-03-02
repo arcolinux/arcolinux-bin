@@ -45,11 +45,7 @@ echo "#############################"
 echo "We removed these packages from the iso"
 echo "- hplip"
 
-sudo pacman -Rs hplip pyqt5-common python-pillow python-pip python-pyqt5 python-reportlab
-
-
-
-
+sudo pacman -Rs hplip
 
 
 echo "################################################################"
