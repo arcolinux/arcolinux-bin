@@ -26,9 +26,9 @@ if pacman -Qi $package &> /dev/null; then
 
 
 	#checking which helper is installed
-	if pacman -Qi packer &> /dev/null; then
+	if pacman -Qi pacman &> /dev/null; then
 
-		echo "Installing with packer"
+		echo "Removing with pacman"
 		sudo pacman -R --noconfirm $package
 
 	fi
@@ -69,9 +69,9 @@ if pacman -Qi $package &> /dev/null; then
 
 
 	#checking which helper is installed
-	if pacman -Qi packer &> /dev/null; then
+	if pacman -Qi pacman &> /dev/null; then
 
-		echo "Installing with packer"
+		echo "Removing with pacman"
 		sudo pacman -R --noconfirm $package
 
 	fi

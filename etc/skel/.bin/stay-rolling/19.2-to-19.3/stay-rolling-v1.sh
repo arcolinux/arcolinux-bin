@@ -42,6 +42,7 @@ echo "#############################"
 
 echo "We removed these packages from the iso"
 echo "- hplip"
+echo "If you have an HP printer, you better keep this"
 
 sudo pacman -Rs hplip
 

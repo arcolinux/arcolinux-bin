@@ -33,21 +33,21 @@ if pacman -Qi $package &> /dev/null; then
 else
 
 	#checking which helper is installed
-	if pacman -Qi yaourt &> /dev/null; then
+	if pacman -Qi yay &> /dev/null; then
 
-		echo "Installing with yaourt"
-		yaourt -S --noconfirm $package
+		echo "Installing with yay"
+		yay -S --noconfirm $package
 
-	elif pacman -Qi packer &> /dev/null; then
-		
-		echo "Installing with packer"
-		packer -S --noconfirm --noedit  $package
-		 		  	
+	elif pacman -Qi trizen &> /dev/null; then
+
+		echo "Installing with trizen"
+		trizen -S --noconfirm --noedit  $package
+
 	fi
 
 	# Just checking if installation was successful
 	if pacman -Qi $package &> /dev/null; then
-	
+
 	echo "################################################################"
 	echo "#########  "$package" has been installed"
 	echo "################################################################"
