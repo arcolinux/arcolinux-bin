@@ -20,6 +20,10 @@ echo "Removing bluez-firmware - moved to AUR"
 
 sudo pacman -Rs bluez-firmware
 
+echo "Removing wpa_actiond - moved to AUR and is orphaned"
+
+sudo pacman -Rs wpa_actiond
+
 echo
 echo "#############################"
 echo "INSTALLATIONS"
