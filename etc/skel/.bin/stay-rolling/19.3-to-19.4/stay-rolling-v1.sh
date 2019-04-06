@@ -24,6 +24,16 @@ echo "Removing wpa_actiond - moved to AUR and is orphaned"
 
 sudo pacman -Rs wpa_actiond
 
+echo "Removing oomox - build takes super long and installs lot of software"
+echo "New PKGBUILD created by maintainer"
+echo "Decide if you want to keep it or not"
+
+sudo pacman -Rs oomox
+
+echo "Reinstalling packages we do want to keep after deleting oomox"
+sudo pacman -S gtk-engines --noconfirm
+sudo pacman -S optipng --noconfirm
+
 echo
 echo "#############################"
 echo "INSTALLATIONS"
