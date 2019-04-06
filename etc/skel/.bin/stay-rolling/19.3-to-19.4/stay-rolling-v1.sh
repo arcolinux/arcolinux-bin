@@ -34,6 +34,10 @@ echo "Reinstalling packages we do want to keep after deleting oomox"
 sudo pacman -S gtk-engines --noconfirm
 sudo pacman -S optipng --noconfirm
 
+echo "Removing old Arc themes and adding new Arc themes from Nico Hood"
+
+sudo pacman -S arcolinux-arc-themes-nico-git
+
 echo
 echo "#############################"
 echo "INSTALLATIONS"
