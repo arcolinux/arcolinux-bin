@@ -31,6 +31,7 @@ echo "Decide if you want to keep it or not"
 sudo pacman -Rs oomox
 
 echo "Reinstalling packages we do want to keep after deleting oomox"
+
 sudo pacman -S gtk-engines --noconfirm
 sudo pacman -S optipng --noconfirm
 
