@@ -20,10 +20,6 @@ echo "Removing redshift still issues with geoip for some users - no frustrating 
 
 sudo pacman -Rs redshift
 
-echo "Removing wpa_actiond - moved to AUR and is orphaned"
-
-sudo pacman -Rs wpa_actiond
-
 echo
 echo "#############################"
 echo "INSTALLATIONS"
