@@ -16,7 +16,7 @@
 echo "#############################"
 echo "REMOVALS"
 echo "#############################"
-echo "Removing redshift still issues with geoip for some users - no frustrating apps"
+echo "Removing redshift - still issues with geoip for some users - no frustrating apps"
 
 sudo pacman -Rs redshift
 
@@ -28,6 +28,13 @@ echo "We have installed these packages on the iso :"
 echo
 echo "NONE"
 echo
+
+echo "##########################################"
+echo "CHANGING VERSION IN /ETC/LSB-RELEASE"
+echo "##########################################"
+
+sudo sed -i 's/v19.04.4/v19.05.2/g' /etc/lsb-release
+
 echo "################################################################"
-echo "###                    All done                             ####"
+echo "###                   LSB-RELASE DONE                       ####"
 echo "################################################################"

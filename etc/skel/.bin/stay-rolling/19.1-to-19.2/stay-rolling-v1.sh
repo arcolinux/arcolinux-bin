@@ -22,6 +22,12 @@ echo "Installing qtbittorrent"
 sudo pacman -S qbittorrent
 
 
+echo "##########################################"
+echo "CHANGING VERSION IN /ETC/LSB-RELEASE"
+echo "##########################################"
+
+sudo sed -i 's/v19.01.4/v19.02.4/g' /etc/lsb-release
+
 echo "################################################################"
-echo "###                    All done                             ####"
+echo "###                   LSB-RELASE DONE                       ####"
 echo "################################################################"

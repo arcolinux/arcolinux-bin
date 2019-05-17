@@ -47,6 +47,12 @@ echo "If you have an HP printer, you better keep this"
 sudo pacman -Rs hplip
 
 
+echo "##########################################"
+echo "CHANGING VERSION IN /ETC/LSB-RELEASE"
+echo "##########################################"
+
+sudo sed -i 's/v19.02.4/v19.03.3/g' /etc/lsb-release
+
 echo "################################################################"
-echo "###                    All done                             ####"
+echo "###                   LSB-RELASE DONE                       ####"
 echo "################################################################"
