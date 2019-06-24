@@ -42,7 +42,7 @@ echo "##########################################"
 echo "CHANGING VERSION IN /ETC/LSB-RELEASE"
 echo "##########################################"
 
-sudo sed -i 's/v19.06.1/v19.07.5/g' /etc/lsb-release
+sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1v19.07.5/' /etc/lsb-release
 
 echo "################################################################"
 echo "###                   LSB-RELEASE DONE                       ####"
