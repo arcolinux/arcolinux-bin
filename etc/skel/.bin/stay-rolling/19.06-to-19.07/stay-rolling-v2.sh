@@ -27,9 +27,9 @@ echo "REMOVALS"
 echo "#############################"
 echo "We have removed these packages from the iso :"
 echo
-echo "NONE"
+echo "gtk-xfce-engine"
 echo
-
+sudo pacman -R gtk-xfce-engine
 echo
 echo "#############################"
 echo "INSTALLATIONS"
@@ -43,7 +43,7 @@ echo "##########################################"
 echo "CHANGING VERSION IN /ETC/LSB-RELEASE"
 echo "##########################################"
 
-sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1v19.07.9/' /etc/lsb-release
+sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1v19.07.16/' /etc/lsb-release
 
 echo "################################################################"
 echo "###                   LSB-RELEASE DONE                       ####"
