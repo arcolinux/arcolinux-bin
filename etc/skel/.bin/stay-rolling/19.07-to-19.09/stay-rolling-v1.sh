@@ -24,7 +24,8 @@ echo "REMOVALS"
 echo "#############################"
 echo "We have removed these packages from the iso :"
 echo
-echo "None"
+echo "gtk-xfce-engine"
+sudo pacman -R gtk-xfce-engine
 echo
 echo "#############################"
 echo "INSTALLATIONS"
