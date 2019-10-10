@@ -24,7 +24,8 @@ echo "REMOVALS"
 echo "#############################"
 echo "We have removed these packages from the iso :"
 echo
-echo "None"
+echo "Temps : no longer maintained"
+sudo pacman -R temps
 echo
 echo "#############################"
 echo "INSTALLATIONS"
