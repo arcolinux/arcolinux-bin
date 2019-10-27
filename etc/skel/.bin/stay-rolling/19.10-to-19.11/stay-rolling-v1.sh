@@ -24,6 +24,8 @@ echo "REMOVALS"
 echo "#############################"
 echo "We have removed these packages from the iso :"
 echo
+echo "Temps : no longer maintained"
+sudo pacman -R temps
 echo "Font-manager - current out of date issue."
 echo "We install the git version later "
 sudo pacman -R font-manager
