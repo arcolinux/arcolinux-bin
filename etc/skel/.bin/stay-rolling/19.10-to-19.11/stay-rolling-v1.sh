@@ -24,17 +24,22 @@ echo "REMOVALS"
 echo "#############################"
 echo "We have removed these packages from the iso :"
 echo
-echo "Font-manager - current issue"
+echo "Font-manager - current out of date issue."
+echo "We install the git version later "
 sudo pacman -R font-manager
-echo "Xterm - terminal from xorg"
+echo "Xterm - terminal from xorg has been removed from iso"
 sudo pacman -R xterm
+echo "Terminus font has been removed from iso"
+sudo pacman -R terminus-font
 echo
 echo "#############################"
 echo "INSTALLATIONS"
 echo "#############################"
 echo "We have installed these packages on the iso :"
 echo
-echo "None"
+echo "ttf-hack font for terminal font e.g. termite"
+sudo pacman -S ttf-hack --needed
+yay -S font-manager-git --needed
 echo
 
 echo "##########################################"
