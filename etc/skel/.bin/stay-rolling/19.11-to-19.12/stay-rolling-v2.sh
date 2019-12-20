@@ -28,6 +28,8 @@ echo "We have removed these packages from the iso :"
 echo
 echo "Dependency no longer necessary - package no longer exists"
 sudo pacman -R python2-xapp
+echo "20/12/2019 - Arch Linux message"
+sudo pacman -Rdd libdmx libxxf86dga
 echo
 echo "#############################"
 echo "INSTALLATIONS"
