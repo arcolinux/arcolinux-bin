@@ -12,9 +12,8 @@
 ##################################################################################################################
 
 echo "Do not just run this. Examine and judge. Run at own risk."
-echo
-echo "Do not run on virtualbox."
-echo "Intended to be used on ssd/harddisk."
+echo "This script will install linux-lts"
+echo "Remember you can install linux-lts during the installation in calamares"
 echo
 echo "Press enter to continue"; read dummy;
 

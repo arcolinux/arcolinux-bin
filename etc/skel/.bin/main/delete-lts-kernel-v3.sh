@@ -12,6 +12,7 @@
 ##################################################################################################################
 
 echo "Do not just run this. Examine and judge. Run at own risk."
+echo "This script will remove the linux-lts if you have it installed."
 echo
 echo "Press enter to continue"; read dummy;
 
