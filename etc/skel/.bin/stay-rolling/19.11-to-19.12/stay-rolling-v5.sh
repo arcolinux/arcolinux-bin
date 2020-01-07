@@ -17,17 +17,17 @@
 function_remove() {
   if pacman -Qi $1 &> /dev/null; then
   		tput setaf 1
-  		echo "####################################################################"
+  		echo "################################################################"
   		echo "################## "$1" is installed and will be removed now."
-      echo "####################################################################"
+      echo "################################################################"
       echo
       tput sgr0
       sudo pacman -Rs $1 --noconfirm
   else
     tput setaf 2
-    echo "####################################################################"
-    echo "################## "$1" was already removed."
-    echo "####################################################################"
+    echo "################################################################"
+    echo "################## "$1" was not present or already removed."
+    echo "################################################################"
     echo
     tput sgr0
   fi
@@ -36,52 +36,56 @@ function_remove() {
 function_remove_dd() {
   if pacman -Qi $1 &> /dev/null; then
   		tput setaf 1
-  		echo "####################################################################"
+  		echo "################################################################"
   		echo "################## "$1" is installed and will be removed now."
-      echo "####################################################################"
+      echo "################################################################"
       echo
       tput sgr0
       sudo pacman -Rdd $1 --noconfirm
   else
     tput setaf 2
-    echo "####################################################################"
+    echo "################################################################"
     echo "################## "$1" was already removed."
-    echo "####################################################################"
+    echo "################################################################"
     echo
     tput sgr0
   fi
 }
 
 
-echo "#############################"
+echo "################################################################"
 echo "SPECIALITIES"
-echo "#############################"
+echo "################################################################"
 echo
-echo "None"
+echo "We have moved to i3-gaps. You decide if you want to switch from i3-gaps-next-git."
+echo "November gave us some trouble with codecs - you decide if you want to keep vivaldi-codecs-ffmpeg-extra-bin"
+echo "It is working again now"
 #sudo pacman -S --noconfirm --needed
 echo
-echo "#############################"
+echo "################################################################"
 echo "REMOVALS"
-echo "#############################"
+echo "################################################################"
 echo "We have removed these packages from the iso :"
 echo
 echo "Dependency no longer necessary - package no longer exists"
 function_remove python2-xapp
+echo
 echo "20/12/2019 - Arch Linux message - xorgproto"
 function_remove_dd libdmx
 function_remove_dd libxxf86dga
 function_remove_dd libxxf86misc
+echo
 echo "20/12/2019 - Arch Linux message Xorg cleanup"
-function_remove_dd xf86-input-keyboard xf86-input-mouse
+function_remove_dd xf86-input-keyboard
+function_remove_dd xf86-input-mouse
 echo
 echo "Arch Linux package name changes"
 function_remove pyqt5-common
 function_remove python-sip-pyqt5
-
 echo
-echo "#############################"
+echo "################################################################"
 echo "INSTALLATIONS"
-echo "#############################"
+echo "################################################################"
 echo "We have installed these packages on the iso :"
 echo
 echo "correction for the version number - not a downgrade"
@@ -96,18 +100,16 @@ sudo pacman -S arcolinux-oblogout --noconfirm
 echo "hblock"
 sudo pacman -S arcolinux-hblock-git --noconfirm --needed
 echo
-
 echo "################################################################"
 echo "###                   STAY-ROLLING DONE                     ####"
 echo "################################################################"
 echo
-
-echo "##########################################"
+echo "################################################################"
 echo "CHANGING VERSION IN /ETC/LSB-RELEASE"
-echo "##########################################"
+echo "################################################################"
 echo
-sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1v20.1.4/' /etc/lsb-release
+sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1v19.12.17/' /etc/lsb-release
 
 echo "################################################################"
-echo "###                   LSB-RELEASE DONE                      ####"
+echo "###                LSB-RELEASE NUMBER UPDATED               ####"
 echo "################################################################"
