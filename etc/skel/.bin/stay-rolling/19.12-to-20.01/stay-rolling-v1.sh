@@ -22,7 +22,7 @@ function_remove() {
       echo "####################################################################"
       echo
       tput sgr0
-      sudo pacman -Rdd $1 --noconfirm
+      sudo pacman -Rs $1 --noconfirm
   else
     tput setaf 2
     echo "####################################################################"
@@ -39,6 +39,7 @@ echo "SPECIALITIES"
 echo "#############################"
 echo
 echo "None"
+#sudo pacman -S --noconfirm --needed
 echo
 echo "#############################"
 echo "REMOVALS"
@@ -46,7 +47,7 @@ echo "#############################"
 echo "We have removed these packages from the iso :"
 echo
 echo "None"
-function_remove screenfetch
+#function_remove screenfetch
 echo
 echo "#############################"
 echo "INSTALLATIONS"
@@ -54,6 +55,7 @@ echo "#############################"
 echo "We have installed these packages on the iso :"
 echo
 echo "None"
+#sudo pacman -S --noconfirm --needed
 echo
 
 echo "################################################################"
