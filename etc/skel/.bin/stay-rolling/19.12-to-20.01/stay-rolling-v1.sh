@@ -20,13 +20,15 @@ function_remove() {
   		echo "####################################################################"
   		echo "################## "$1" is installed and will be removed now."
       echo "####################################################################"
+      echo
       tput sgr0
-      sudo pacman -R screenfetch --noconfirm
+      sudo pacman -Rdd $1 --noconfirm
   else
     tput setaf 2
     echo "####################################################################"
     echo "################## "$1" was already removed."
     echo "####################################################################"
+    echo
     tput sgr0
   fi
 }
