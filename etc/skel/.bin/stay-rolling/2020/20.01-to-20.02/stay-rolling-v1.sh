@@ -75,7 +75,6 @@ echo "We have installed these packages on the iso :"
 echo
 #echo "None"
 echo "ArcoLinux Welcome and Tweak Tool app"
-sudo pacman -S --noconfirm --needed python-numpy
 sudo pacman -S --noconfirm --needed dex
 sudo pacman -S --noconfirm --needed arcolinux-welcome-app-git
 sudo pacman -S --noconfirm --needed arcolinux-tweak-tool-git
@@ -86,8 +85,9 @@ sudo pacman -S --noconfirm --needed arcolinux-welcome-app-git
 sudo pacman -S --noconfirm --needed breeze
 sudo pacman -S --noconfirm --needed breeze-icons
 sudo pacman -S --noconfirm --needed oh-my-zsh-git
-sudo pacman -S --noconfirm --needed openbox-themes-pambudi-git
-sudo pacman -S --noconfirm --needed xfce4-screensaver
+echo "Confirm if you need these on your system"
+sudo pacman -S --needed openbox-themes-pambudi-git
+sudo pacman -S --needed xfce4-screensaver
 echo
 echo "###############################################################################"
 echo "###                   STAY-ROLLING DONE                     ####"
