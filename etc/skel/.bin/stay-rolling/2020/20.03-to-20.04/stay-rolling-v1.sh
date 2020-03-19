@@ -69,9 +69,10 @@ echo "None"
 #function_remove ...
 echo "Decide whether you want to keep or remove the breeze package"
 echo "Breeze is a beautiful cursor for plasma but it also brings in a lot of dependencies"
-echo "Answer yes if you want to remove it"
+echo "Answer y or Y if you want to remove it"
+echo "Anything else will not delete breeze"
 read response
-if [[ "$response" == [yes] ]]; then
+if [[ "$response" == [yY] ]]; then
   sudo pacman -Rs breeze --noconfirm
 fi
 echo
