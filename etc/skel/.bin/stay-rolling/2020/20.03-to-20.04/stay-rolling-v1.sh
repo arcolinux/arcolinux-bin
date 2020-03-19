@@ -65,7 +65,7 @@ echo "REMOVALS"
 echo "###############################################################################"
 echo "We have removed these packages from the iso :"
 echo
-echo "None"
+#echo "None"
 #function_remove ...
 echo "Decide whether you want to keep or remove the breeze package"
 echo "Breeze is a beautiful cursor for plasma but it also brings in a lot of dependencies"
