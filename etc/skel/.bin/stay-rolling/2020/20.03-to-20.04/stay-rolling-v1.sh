@@ -69,6 +69,7 @@ echo "None"
 #function_remove ...
 echo "Decide whether you want to keep or remove the breeze package"
 echo "Breeze is a beautiful cursor for plasma but it also brings in a lot of dependencies"
+echo "Plasma users are advised to keep the breeze cursor - answer n or N"
 echo "Answer y or Y if you want to remove it"
 echo "Anything else will not delete breeze"
 read response
