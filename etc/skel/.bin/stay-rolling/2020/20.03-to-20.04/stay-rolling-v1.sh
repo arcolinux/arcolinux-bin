@@ -82,8 +82,8 @@ echo "INSTALLATIONS"
 echo "###############################################################################"
 echo "We have installed these packages on the iso :"
 echo
-#echo "None"
-#sudo pacman -S --noconfirm --needed
+echo "bibata-cursor-theme"
+sudo pacman -S --noconfirm --needed bibata-cursor-theme
 echo
 echo "###############################################################################"
 echo "###                   STAY-ROLLING DONE                     ####"
