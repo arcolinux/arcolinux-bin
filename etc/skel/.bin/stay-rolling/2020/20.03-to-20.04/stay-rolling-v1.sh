@@ -72,7 +72,7 @@ echo "Breeze is a beautiful cursor for plasma but it also brings in a lot of dep
 echo "Answer yes if you want to remove it"
 read response
 if [[ "$response" == [yes] ]]; then
-  sudo pacman -Rs breeze
+  sudo pacman -Rs breeze --noconfirm
 fi
 echo
 echo "###############################################################################"
