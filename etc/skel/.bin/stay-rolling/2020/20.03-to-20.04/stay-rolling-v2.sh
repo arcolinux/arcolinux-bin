@@ -76,6 +76,12 @@ read response
 if [[ "$response" == [yY] ]]; then
   sudo pacman -Rs breeze --noconfirm
 fi
+echo "Decide whether you want remove xfce4-screensaver"
+echo "We experienced issues with screens going black because of this package"
+read response
+if [[ "$response" == [yY] ]]; then
+  sudo pacman -Rs xfce4-screensaver --noconfirm
+fi
 echo
 echo "###############################################################################"
 echo "INSTALLATIONS"
@@ -93,7 +99,7 @@ echo "##########################################################################
 echo "CHANGING VERSION IN /ETC/LSB-RELEASE"
 echo "###############################################################################"
 echo
-sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1v20.4.3/' /etc/lsb-release
+sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1v20.4.10/' /etc/lsb-release
 
 echo "###############################################################################"
 echo "###                LSB-RELEASE NUMBER UPDATED               ####"
