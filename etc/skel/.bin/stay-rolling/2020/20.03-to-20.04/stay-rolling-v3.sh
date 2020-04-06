@@ -78,6 +78,8 @@ if [[ "$response" == [yY] ]]; then
 fi
 echo "Decide whether you want remove xfce4-screensaver"
 echo "We experienced issues with screens going black because of this package"
+echo "Answer y or Y if you want to remove it"
+echo "Answer n or N if you want to keep it"
 read response
 if [[ "$response" == [yY] ]]; then
   sudo pacman -Rs xfce4-screensaver --noconfirm
