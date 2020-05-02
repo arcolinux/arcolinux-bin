@@ -71,8 +71,14 @@ echo "INSTALLATIONS"
 echo "###############################################################################"
 echo "We have installed these packages on the iso :"
 echo
-echo "polybar - you can now switch the bar in i3 with ATT"
-sudo pacman -S --noconfirm --needed polybar
+echo "Decide whether you want/need to install polybar on your current desktop"
+echo "i3wm can now also use polybar as a menu - switch in ATT"
+echo "Answer y or Y if you want to remove it"
+echo "Answer n or N if you want to keep it"
+read response
+if [[ "$response" == [yY] ]]; then
+  sudo pacman -S --noconfirm --needed polybar
+fi
 echo
 echo "###############################################################################"
 echo "###                   STAY-ROLLING DONE                     ####"
