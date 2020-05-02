@@ -72,15 +72,20 @@ echo "Answer y or Y if you want to remove it"
 echo "Answer n or N if you want to keep it"
 read response
 if [[ "$response" == [yY] ]]; then
-  sudo pacman -Rs arcolinux-oblogout arcolinux-oblogout-themes-git --noconfirm
-  sudo rm /etc/oblogout.conf
+  function_remove arcolinux-oblogout
+  function_remove  arcolinux-oblogout-themes-git
+  if test -f /etc/oblogout.conf ; then
+    sudo rm /etc/oblogout.conf
+  fi
 fi
+
 echo "Decide whether you want remove slim and slim themes"
 echo "Answer y or Y if you want to remove it"
 echo "Answer n or N if you want to keep it"
 read response
 if [[ "$response" == [yY] ]]; then
-  sudo pacman -Rs arcolinux-slim arcolinux-slimlock-themes-git --noconfirm
+  function_remove arcolinux-slim 
+  function_remove arcolinux-slimlock-themes-git
 fi
 
 echo "###############################################################################"
