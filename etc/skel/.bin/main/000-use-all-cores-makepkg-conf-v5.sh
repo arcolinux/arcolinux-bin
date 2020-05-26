@@ -1,7 +1,5 @@
 #!/bin/bash
-# credits to Soehub
-# https://gist.github.com/soehub/fc07b86e2292c562328ee0dc2aadf740
-set -e
+#set -e
 ##################################################################################################################
 # Author	:	Erik Dubois
 # Website	:	https://www.erikdubois.be
@@ -23,12 +21,9 @@ then
         echo "Changing the makeflags for "$numberofcores" cores."
         sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j'$(($numberofcores+1))'"/g' /etc/makepkg.conf;
         echo "Changing the compression settings for "$numberofcores" cores."
-        sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -T '"$numberofcores"' -z -)/g' /etc/makepkg.conf
+        sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -z - --threads=0)/g' /etc/makepkg.conf
+        sudo sed -i 's/COMPRESSZST=(zstd -c -z -q -)/COMPRESSZST=(zstd -c -z -q - --threads=0)/g' /etc/makepkg.conf
+        sudo sed -i "s/PKGEXT='.pkg.tar.xz'/PKGEXT='.pkg.tar.zst'/g" /etc/makepkg.conf
 else
         echo "No change."
 fi
-
-
-echo "################################################################"
-echo "###  All cores will be used during building and compression ####"
-echo "################################################################"
