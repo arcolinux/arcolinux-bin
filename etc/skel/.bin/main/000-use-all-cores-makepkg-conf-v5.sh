@@ -13,6 +13,9 @@
 #
 ##################################################################################################################
 
+echo "ArcoLinux isos will take care of this automatically"
+echo "Only interesting if you are on Arch Linux - phase 5 in learning path"
+
 numberofcores=$(grep -c ^processor /proc/cpuinfo)
 
 if [ $numberofcores -gt 1 ]
