@@ -19,9 +19,9 @@ if pacman -Qi samba &> /dev/null; then
   echo "Samba is installed"
   echo "###################################################################"
 else
-  echo "###################################################################"
+  tput setaf 1;echo "###################################################################"
   echo "First use our scripts to install samba and/or network discovery"
-  echo "###################################################################"
+  echo "###################################################################";tput sgr0
   exit 1
 fi
 
@@ -30,10 +30,10 @@ FILE=/etc/samba/smb.conf
 if test -f "$FILE"; then
     echo "/etc/samba/smb.conf has been found"
 else
-  echo "###################################################################"
+  tput setaf 1;echo "###################################################################"
   echo "We did not find /etc/samba/smb.conf"
   echo "First use our scripts to install samba and/or network discovery"
-  echo "###################################################################"
+  echo "###################################################################";tput sgr0
   exit 1
 fi
 
@@ -71,8 +71,6 @@ sudo gpasswd -a $USER sambashare
 sudo chown root.sambashare /var/lib/samba/usershares
 sudo chmod 1770 /var/lib/samba/usershares
 
-echo "Now reboot"
-
-echo "################################################################"
-echo "#########     The user can now share folders    ################"
-echo "################################################################"
+tput setaf 1;echo "###################################################################"
+echo "Now reboot before sharing folders"
+echo "###################################################################";tput sgr0
