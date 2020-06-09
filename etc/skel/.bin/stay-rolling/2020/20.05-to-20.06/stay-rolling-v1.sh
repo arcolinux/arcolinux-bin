@@ -78,7 +78,8 @@ echo "INSTALLATIONS"
 echo "###############################################################################"
 echo "We have installed these packages on the iso :"
 echo
-echo "none"
+echo "We have moved the update-mirrors service to a separate package"
+sudo pacman -S arcolinux-systemd-services-git --noconfirm --needed
 echo
 echo "###############################################################################"
 echo "###                   STAY-ROLLING DONE                     ####"
