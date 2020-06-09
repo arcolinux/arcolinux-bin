@@ -14,30 +14,38 @@ set -e
 ##################################################################################################################
 #source fedora 23 : https://opsech.io/posts/2016/Apr/06/sharing-files-with-kde-and-samba.html
 
-echo "################################################################"
-echo "First run the script to install samba"
-echo "Then run this script if you want to be able to right mouse click"
-echo "on a folder in Plasma/Dolphin to share with others in your network"
-echo "Remember to reboot after installation"
-echo "################################################################"
-
-sudo pacman -S kdenetwork-filesharing --noconfirm --needed
+#checking if filemanager is installed then install extra packages
+if pacman -Qi nemo &> /dev/null; then
+  sudo pacman -S --noconfirm --needed nemo-share
+fi
+if pacman -Qi nautilus &> /dev/null; then
+  sudo pacman -S --noconfirm --needed nautilus-share
+fi
+if pacman -Qi caja &> /dev/null; then
+  sudo pacman -S --noconfirm --needed caja-share
+fi
+if pacman -Qi dolphin &> /dev/null; then
+  sudo pacman -S --noconfirm --needed kdenetwork-filesharing
+fi
+if pacman -Qi thunar &> /dev/null; then
+  sudo pacman -S --noconfirm --needed thunar-shares-plugin
+fi
 
 file="/etc/samba/smb.conf"
 
 sudo sed -i '/^\[global\]/a \
 \
 usershare allow guests = true \
-usershare max shares =  5 \
+usershare max shares =  50 \
 usershare owner only = true \
-usershare path = /var/lib/samba/shares' $file
+usershare path = /var/lib/samba/usershares' $file
 
 
-sudo mkdir -p /var/lib/samba/shares
-sudo groupadd shares
-sudo gpasswd -a $USER shares
-sudo chown root.shares /var/lib/samba/shares
-sudo chmod 1770 /var/lib/samba/shares
+sudo mkdir -p /var/lib/samba/usershares
+sudo groupadd -r sambashare
+sudo gpasswd -a $USER sambashare
+sudo chown root.sambashare /var/lib/samba/usershares
+sudo chmod 1770 /var/lib/samba/usershares
 
 echo "Now reboot"
 
