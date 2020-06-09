@@ -14,6 +14,14 @@ set -e
 ##################################################################################################################
 #source fedora 23 : https://opsech.io/posts/2016/Apr/06/sharing-files-with-kde-and-samba.html
 
+if pacman -Qi samba &> /dev/null; then
+  echo "Samba is installed. Do you need network discovery?"
+else
+  echo "First install samba with our scripts."
+  exit 1
+fi
+
+
 #checking if filemanager is installed then install extra packages
 if pacman -Qi nemo &> /dev/null; then
   sudo pacman -S --noconfirm --needed nemo-share
