@@ -14,20 +14,26 @@ set -e
 ##################################################################################################################
 #source fedora 23 : https://opsech.io/posts/2016/Apr/06/sharing-files-with-kde-and-samba.html
 
+if pacman -Qi samba &> /dev/null; then
+  echo "###################################################################"
+  echo "Samba is installed"
+  echo "###################################################################"
+else
+  echo "###################################################################"
+  echo "First use our scripts to install samba and/or network discovery"
+  echo "###################################################################"
+  exit 1
+fi
+
 FILE=/etc/samba/smb.conf
 
 if test -f "$FILE"; then
     echo "/etc/samba/smb.conf has been found"
 else
-  echo "we did not find /etc/samba/smb.conf"
+  echo "###################################################################"
+  echo "We did not find /etc/samba/smb.conf"
   echo "First use our scripts to install samba and/or network discovery"
-  exit 1
-fi
-
-if pacman -Qi samba &> /dev/null; then
-  echo "Samba is installed"
-else
-  echo "First use our scripts to install samba and/or network discovery"
+  echo "###################################################################"
   exit 1
 fi
 
