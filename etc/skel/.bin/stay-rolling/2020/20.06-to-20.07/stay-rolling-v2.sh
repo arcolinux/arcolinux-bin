@@ -86,11 +86,9 @@ echo "###                   STAY-ROLLING DONE                     ####"
 echo "###############################################################################"
 echo
 echo "###############################################################################"
-echo "CHANGING VERSION IN /ETC/LSB-RELEASE"
+echo "WE WILL NO LONGER USE RELEASE NUMBERS IN /ETC/LSB-RELEASE"
+echo "ARCOLINUX GOES ROLLING"
+#sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1rolling/' /etc/lsb-release
 echo "###############################################################################"
-echo
-sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1v20.7.5/' /etc/lsb-release
-
-echo "###############################################################################"
-echo "###                LSB-RELEASE NUMBER UPDATED               ####"
+echo "https://arcolinuxforum.com/viewtopic.php?f=79&t=2122"
 echo "###############################################################################"
