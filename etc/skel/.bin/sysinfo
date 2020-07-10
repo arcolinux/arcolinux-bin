@@ -6,7 +6,7 @@
 # sudo pacman -S wmctrl
 # awesome font displays in Termite not in urxvt
 
-OS=$(cat /etc/os-release | awk -F '=' '/NAME/ {print $2}')
+OS=$(cat /etc/lsb-release | awk -F '=' '/DISTRIB_ID/ {print $2}')
 KERNEL=$(uname -r)
 ARCH=$(uname -m)
 VERSION=$(cat /etc/lsb-release | awk -F '=' '/DISTRIB_RELEASE/ {print $2}')
