@@ -93,3 +93,10 @@ echo "ARCOLINUX GOES ROLLING"
 echo "###############################################################################"
 echo "https://arcolinuxforum.com/viewtopic.php?f=79&t=2122"
 echo "###############################################################################"
+
+tput setaf 1
+echo "###############################################################################"
+echo "We do not recommend this package on Plasma and Deepin"
+echo "Remove it again with sudo pacman -R arcolinux-kvantum-theme-arc-git"
+echo "###############################################################################"
+tput sgr0
