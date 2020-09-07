@@ -87,6 +87,9 @@ echo "###                   STAY-ROLLING DONE                     ####"
 echo "###############################################################################"
 echo
 echo "###############################################################################"
+echo
+echo
+echo "###############################################################################"
 echo "WE WILL NO LONGER USE RELEASE NUMBERS IN /ETC/LSB-RELEASE"
 echo "ARCOLINUX GOES ROLLING"
 #sudo sed -i 's/\(^DISTRIB_RELEASE=\).*/\1rolling/' /etc/lsb-release
@@ -94,9 +97,22 @@ echo "##########################################################################
 echo "https://arcolinuxforum.com/viewtopic.php?f=79&t=2122"
 echo "###############################################################################"
 
+DESKTOP=/usr/share/xsessions/plasma.desktop
+if [ -f "$DESKTOP" ]; then
+    function_remove arcolinux-kvantum-arc-git
+fi
+
+DESKTOP=/usr/share/xsessions/deepin.desktop
+if [ -f "$DESKTOP" ]; then
+    function_remove arcolinux-kvantum-arc-git
+fi
+
 tput setaf 1
 echo "###############################################################################"
 echo "We do not recommend this package on Plasma and Deepin"
-echo "Remove it again with sudo pacman -R arcolinux-kvantum-theme-arc-git"
+echo "The script removes the package automatically from your system"
+echo "if the script finds deepin or plasma on your computer."
+echo "If you have a system with multiple desktops, it is up to the user"
+echo "to decide if you use the package or not."
 echo "###############################################################################"
 tput sgr0
