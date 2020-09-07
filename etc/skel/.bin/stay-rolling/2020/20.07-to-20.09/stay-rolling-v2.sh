@@ -101,26 +101,26 @@ DESKTOP=/usr/share/xsessions/plasma.desktop
 if [ -f "$DESKTOP" ]; then
   tput setaf 1
   echo "###############################################################################"
-  echo "We do not recommend this package on Plasma and Deepin"
+  echo "We do not recommend arcolinux-kvantum-theme-arc-git on Plasma."
   echo "The script removes the package automatically from your system"
-  echo "if the script finds deepin or plasma on your computer."
+  echo "if the script find plasma on your computer."
   echo "If you have a system with multiple desktops, it is up to the user"
   echo "to re-install the packge or not."
   echo "###############################################################################"
   tput sgr0
-  function_remove arcolinux-kvantum-arc-git
+  function_remove arcolinux-kvantum-theme-arc-git
 fi
 
 DESKTOP=/usr/share/xsessions/deepin.desktop
 if [ -f "$DESKTOP" ]; then
   tput setaf 1
   echo "###############################################################################"
-  echo "We do not recommend this package on Plasma and Deepin"
+  echo "We do not recommend arcolinux-kvantum-theme-arc-git on Deepin."
   echo "The script removes the package automatically from your system"
-  echo "if the script finds deepin or plasma on your computer."
+  echo "if the script finds deepin on your computer."
   echo "If you have a system with multiple desktops, it is up to the user"
   echo "to re-install the packge or not."
   echo "###############################################################################"
   tput sgr0
-  function_remove arcolinux-kvantum-arc-git
+  function_remove arcolinux-kvantum-theme-arc-git
 fi
