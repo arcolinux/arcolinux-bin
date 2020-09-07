@@ -99,20 +99,28 @@ echo "##########################################################################
 
 DESKTOP=/usr/share/xsessions/plasma.desktop
 if [ -f "$DESKTOP" ]; then
-    function_remove arcolinux-kvantum-arc-git
+  tput setaf 1
+  echo "###############################################################################"
+  echo "We do not recommend this package on Plasma and Deepin"
+  echo "The script removes the package automatically from your system"
+  echo "if the script finds deepin or plasma on your computer."
+  echo "If you have a system with multiple desktops, it is up to the user"
+  echo "to re-install the packge or not."
+  echo "###############################################################################"
+  tput sgr0
+  function_remove arcolinux-kvantum-arc-git
 fi
 
 DESKTOP=/usr/share/xsessions/deepin.desktop
 if [ -f "$DESKTOP" ]; then
-    function_remove arcolinux-kvantum-arc-git
+  tput setaf 1
+  echo "###############################################################################"
+  echo "We do not recommend this package on Plasma and Deepin"
+  echo "The script removes the package automatically from your system"
+  echo "if the script finds deepin or plasma on your computer."
+  echo "If you have a system with multiple desktops, it is up to the user"
+  echo "to re-install the packge or not."
+  echo "###############################################################################"
+  tput sgr0
+  function_remove arcolinux-kvantum-arc-git
 fi
-
-tput setaf 1
-echo "###############################################################################"
-echo "We do not recommend this package on Plasma and Deepin"
-echo "The script removes the package automatically from your system"
-echo "if the script finds deepin or plasma on your computer."
-echo "If you have a system with multiple desktops, it is up to the user"
-echo "to decide if you use the package or not."
-echo "###############################################################################"
-tput sgr0
