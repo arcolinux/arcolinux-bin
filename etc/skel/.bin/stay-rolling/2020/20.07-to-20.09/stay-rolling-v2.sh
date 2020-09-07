@@ -77,17 +77,13 @@ echo "##########################################################################
 echo "We have installed these packages on the iso :"
 echo
 echo "###############################################################################"
-echo "We do not recommend this package on Plasma and Deepin"
-echo "Remove it again with sudo pacman -R arcolinux-kvantum-theme-arc-git"
+echo "We have installed arcolinux-kvantum-theme-arc-git"
 echo "###############################################################################"
 sudo pacman -S --noconfirm --needed arcolinux-kvantum-theme-arc-git
 echo
 echo "###############################################################################"
 echo "###                   STAY-ROLLING DONE                     ####"
 echo "###############################################################################"
-echo
-echo "###############################################################################"
-echo
 echo
 echo "###############################################################################"
 echo "WE WILL NO LONGER USE RELEASE NUMBERS IN /ETC/LSB-RELEASE"
@@ -103,7 +99,7 @@ if [ -f "$DESKTOP" ]; then
   echo "###############################################################################"
   echo "We do not recommend arcolinux-kvantum-theme-arc-git on Plasma."
   echo "The script removes the package automatically from your system"
-  echo "if the script find plasma on your computer."
+  echo "if the script finds plasma on your computer."
   echo "If you have a system with multiple desktops, it is up to the user"
   echo "to re-install the packge or not."
   echo "###############################################################################"
@@ -113,7 +109,6 @@ if [ -f "$DESKTOP" ]; then
   echo "###############################################################################"
   echo "###                   STAY-ROLLING DONE                     ####"
   echo "###############################################################################"
-
 fi
 
 DESKTOP=/usr/share/xsessions/deepin.desktop
@@ -132,5 +127,4 @@ if [ -f "$DESKTOP" ]; then
   echo "###############################################################################"
   echo "###                   STAY-ROLLING DONE                     ####"
   echo "###############################################################################"
-
 fi
