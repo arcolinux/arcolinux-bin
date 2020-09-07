@@ -76,7 +76,10 @@ echo "INSTALLATIONS"
 echo "###############################################################################"
 echo "We have installed these packages on the iso :"
 echo
-#echo "None"
+echo "###############################################################################"
+echo "We do not recommend this package on Plasma and Deepin"
+echo "Remove it again with sudo pacman -R arcolinux-kvantum-theme-arc-git"
+echo "###############################################################################"
 sudo pacman -S --noconfirm --needed arcolinux-kvantum-theme-arc-git
 echo
 echo "###############################################################################"
