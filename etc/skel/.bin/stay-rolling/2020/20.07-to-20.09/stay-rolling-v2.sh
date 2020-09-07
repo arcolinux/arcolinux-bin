@@ -101,7 +101,7 @@ if [ -f "$DESKTOP" ]; then
   echo "The script removes the package automatically from your system"
   echo "if the script finds plasma on your computer."
   echo "If you have a system with multiple desktops, it is up to the user"
-  echo "to re-install the packge or not."
+  echo "to re-install the package or not."
   echo "###############################################################################"
   tput sgr0
   function_remove arcolinux-kvantum-theme-arc-git
@@ -119,7 +119,7 @@ if [ -f "$DESKTOP" ]; then
   echo "The script removes the package automatically from your system"
   echo "if the script finds deepin on your computer."
   echo "If you have a system with multiple desktops, it is up to the user"
-  echo "to re-install the packge or not."
+  echo "to re-install the package or not."
   echo "###############################################################################"
   tput sgr0
   function_remove arcolinux-kvantum-theme-arc-git
