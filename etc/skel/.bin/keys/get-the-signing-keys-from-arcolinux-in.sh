@@ -28,3 +28,11 @@ sudo pacman-key --lsign-key 4B1B49F7186D8731
 echo "################################################################"
 echo "#########   the signing keys should now be in   ################"
 echo "################################################################"
+
+echo "If you get an error -- Remote key not fetched correctly from keyserver"
+echo
+echo "Add this line to /etc/pacman.d/gnupg/gpg.conf"
+echo "keyserver hkp://ipv4.pool.sks-keyservers.net:11371"
+echo "alternatives"
+echo "keyserver hkps://hkps.pool.sks-keyservers.net:443"
+echo "keyserver hkp://pool.sks-keyservers.net:80"
