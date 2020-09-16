@@ -25,6 +25,10 @@ sudo pacman-key --lsign-key F1ABB772CE9F7FC0
 sudo pacman-key --recv-keys 4B1B49F7186D8731
 sudo pacman-key --lsign-key 4B1B49F7186D8731
 
+#Stephen key
+sudo pacman-key --recv-keys 02D507C6EFB8CEAA
+sudo pacman-key --lsign-key 02D507C6EFB8CEAA
+
 echo "################################################################"
 echo "#########   the signing keys should now be in   ################"
 echo "################################################################"
@@ -36,3 +40,4 @@ echo "keyserver hkp://ipv4.pool.sks-keyservers.net:11371"
 echo "alternatives"
 echo "keyserver hkps://hkps.pool.sks-keyservers.net:443"
 echo "keyserver hkp://pool.sks-keyservers.net:80"
+echo "keyserver hkp://keys.gnupg.net:11371"
