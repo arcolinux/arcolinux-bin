@@ -29,6 +29,10 @@ sudo pacman-key --lsign-key 4B1B49F7186D8731
 sudo pacman-key --recv-keys 02D507C6EFB8CEAA
 sudo pacman-key --lsign-key 02D507C6EFB8CEAA
 
+#Brad Heffernan
+sudo pacman-key --recv-keys 18064BF445855549
+sudo pacman-key --lsign-key 18064BF445855549
+
 echo "################################################################"
 echo "#########   the signing keys should now be in   ################"
 echo "################################################################"
