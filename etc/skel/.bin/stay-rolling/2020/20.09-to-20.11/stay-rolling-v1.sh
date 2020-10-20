@@ -78,6 +78,12 @@ sudo pacman -S --noconfirm --needed hw-probe
 sudo pacman -S --noconfirm --needed edid-decode-git
 echo
 echo "###############################################################################"
+echo "We have installed appstream for the fix of pamac-aur not showing icons"
+echo "###############################################################################"
+echo
+sudo pacman -S --noconfirm --needed appstream
+echo
+echo "###############################################################################"
 echo "WE WILL NO LONGER USE RELEASE NUMBERS IN /ETC/LSB-RELEASE"
 echo "ARCOLINUX GOES ROLLING"
 echo "Use the alias iso to know which iso you used to install ArcoLinux"
