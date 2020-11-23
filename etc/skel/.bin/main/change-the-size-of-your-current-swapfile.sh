@@ -53,6 +53,7 @@ fi
 if [ "$choice" -ge 1 ] && [ "$choice" -le 32 ]
 
 then
+	echo
 	echo "###############################################################################"
 	echo "You have chosen "$choice" GB."
 	echo "###############################################################################"
@@ -67,11 +68,10 @@ echo
 echo "###############################################################################"
 echo "Turning off current swapfile"
 echo "###############################################################################"
-echo
 sudo swapoff -a
 echo
 echo "###############################################################################"
-echo "Making new swapfile"
+echo "Making new swapfile - the bigger the number, the longer you have to wait"
 echo "###############################################################################"
 echo
 sudo dd if=/dev/zero of=/swapfile bs=1G count=$choice status=progress
