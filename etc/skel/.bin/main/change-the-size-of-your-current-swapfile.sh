@@ -40,6 +40,16 @@ echo "##########################################################################
 echo
 read choice
 
+if [[ ! "$choice" =~ ^[0-9]+$ ]]; then
+	tput setaf 1
+	echo "###############################################################################"
+	echo "Only an integer number is allowed"
+	echo "###############################################################################"
+      	tput sgr0
+    exit 1
+fi
+
+
 if [ "$choice" -ge 1 ] && [ "$choice" -le 32 ]
 
 then
@@ -84,7 +94,7 @@ echo
 sudo chmod 600 /swapfile
 echo
 echo "###############################################################################"
-echo "Formating swapfile"
+echo "Setting up Linux swapfile"
 echo "###############################################################################"
 echo
 sudo mkswap /swapfile
