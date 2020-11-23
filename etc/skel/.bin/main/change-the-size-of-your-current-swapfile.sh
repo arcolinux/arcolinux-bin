@@ -63,11 +63,6 @@ else
 	echo "###############################################################################"
 
 fi
-
-echo
-echo "###############################################################################"
-echo "CHANGING SWAPFILE SIZE"
-echo "###############################################################################"
 echo
 echo "###############################################################################"
 echo "Turning off current swapfile"
@@ -76,7 +71,7 @@ echo
 sudo swapoff -a
 echo
 echo "###############################################################################"
-echo "##Making new swapfile" ##"Change count to desired swapfile size in mb"
+echo "Making new swapfile"
 echo "###############################################################################"
 echo
 sudo dd if=/dev/zero of=/swapfile bs=1G count=$choice status=progress
@@ -100,7 +95,7 @@ echo
 sudo swapon /swapfile
 echo
 echo "###############################################################################"
-echo "                  Finished - Please REBOOT your computer                       "
+echo "                  FINISHED - PLEASE REBOOT YOUR COMPUTER                       "
 echo "###############################################################################"
 echo
 
