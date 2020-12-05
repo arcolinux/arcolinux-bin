@@ -21,8 +21,8 @@ echo "PACKAGES WE WILL MOVE OUR ARCOLINUX REPOS TO THE TOP"
 echo "###############################################################################"
 echo
 
-sudo mv /etc/pacman.conf /etc/pacman.conf.backup
-sudo cp pacman.conf /etc/pacman.conf
+sudo cp /etc/pacman.conf /etc/pacman.conf.backup
+sudo cp -f pacman.conf /etc/pacman.conf
 
 echo
 echo "###############################################################################"
