@@ -82,6 +82,13 @@ echo "We have installed appstream for the fix of pamac-aur not showing icons"
 echo "###############################################################################"
 echo
 sudo pacman -S --noconfirm --needed appstream
+echo "###############################################################################"
+echo "We would like this package to be present on all our desktops."
+echo "Only mimeapps.list is now in here"
+echo "More standardization and lower maintenance"
+echo "###############################################################################"
+echo
+sudo pacman -S --noconfirm --needed arcolinux-config-all-desktops-git
 echo
 echo "###############################################################################"
 echo "WE WILL NO LONGER USE RELEASE NUMBERS IN /ETC/LSB-RELEASE"
