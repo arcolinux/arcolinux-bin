@@ -68,7 +68,7 @@ usershare path = /var/lib/samba/usershares' $file
 sudo mkdir -p /var/lib/samba/usershares
 sudo groupadd -r sambashare
 sudo gpasswd -a $USER sambashare
-sudo chown root.sambashare /var/lib/samba/usershares
+sudo chown root:sambashare /var/lib/samba/usershares
 sudo chmod 1770 /var/lib/samba/usershares
 
 tput setaf 1;echo "###################################################################"
