@@ -20,8 +20,8 @@ echo "error: failed to commit transaction (conflicting files)"
 echo "Solution: remove the conflicting files and install the package"
 echo "This script will do just that."
 
-rm -f /etc/systemd/system/pacman-init.service
-rm -f /etc/systemd/system/multi-user.target.wants/pacman-init.service
+sudo rm -f /etc/systemd/system/pacman-init.service
+sudo rm -f /etc/systemd/system/multi-user.target.wants/pacman-init.service
 sudo pacman -S --noconfirm arcolinux-systemd-services-git
 
 
