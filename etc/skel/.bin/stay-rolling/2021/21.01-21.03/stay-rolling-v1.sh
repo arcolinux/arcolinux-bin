@@ -71,10 +71,21 @@ echo "##########################################################################
 echo "We have installed these packages on the iso :"
 echo
 echo "###############################################################################"
-echo "We have installed sddm-config-editor-git bibata-cursor-theme-bin"
+echo "We have installed sddm-config-editor-git to configure SDDM"
+echo "We leave it up to you to decide to use lightdm or sddm"
+echo "You can switch with these aliases"
+echo "- tosddm"
+echo "- tolightdm"
 echo "###############################################################################"
 echo
 sudo pacman -S --noconfirm --needed sddm-config-editor-git
+echo
+echo "###############################################################################"
+echo "We have installed bibata-cursor-theme-bin - updates were faster"
+echo "Let us uninstall bibata-cursor-theme IF present and install the bin version"
+echo "###############################################################################"
+echo
+sudo pacman -R --noconfirm bibata-cursor-theme
 sudo pacman -S --noconfirm --needed bibata-cursor-theme-bin
 echo
 echo "###############################################################################"
