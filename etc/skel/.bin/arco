@@ -26,11 +26,11 @@ initializeANSI
 
 cat << EOF
 
-${boldon}${redf}        ■      ${boldon}${greenf}        ■      ${boldon}${yellowf}        ■     ${boldon}${bluef}         ■       ${boldon}${purplef}       ■      ${boldon}${cyanf}        ■   ${reset}
-${boldon}${redf}       ■■■     ${boldon}${greenf}       ■■■     ${boldon}${yellowf}       ■■■    ${boldon}${bluef}        ■■■      ${boldon}${purplef}      ■■■     ${boldon}${cyanf}       ■■■  ${reset}
-${boldon}${redf}      ■■■■■    ${boldon}${greenf}      ■■■■■    ${boldon}${yellowf}      ■■■■■   ${boldon}${bluef}       ■■■■■     ${boldon}${purplef}     ■■■■■    ${boldon}${cyanf}      ■■■■■ ${reset}
-${redf}     ■     ■   ${greenf}     ■     ■   ${yellowf}     ■     ■   ${bluef}     ■     ■    ${purplef}    ■     ■   ${cyanf}     ■     ■   ${reset}
-${redf}    ■■ ■■■■■■  ${greenf}    ■■ ■■■■■■  ${yellowf}    ■■ ■■■■■■  ${bluef}    ■■ ■■■■■■   ${purplef}   ■■ ■■■■■■  ${cyanf}    ■■ ■■■■■■  ${reset}
-${redf}   ■■       ■■ ${greenf}   ■■       ■■ ${yellowf}   ■■       ■■ ${bluef}   ■■       ■■  ${purplef}  ■■       ■■ ${cyanf}   ■■       ■■ ${reset}
+${boldon}${redf}        ■      ${boldon}${greenf}        ■      ${boldon}${yellowf}        ■     ${boldon}${bluef}         ■       ${boldon}${purplef}       ■      ${boldon}${reset}
+${boldon}${redf}       ■■■     ${boldon}${greenf}       ■■■     ${boldon}${yellowf}       ■■■    ${boldon}${bluef}        ■■■      ${boldon}${purplef}      ■■■     ${boldon}${reset}
+${boldon}${redf}      ■■■■■    ${boldon}${greenf}      ■■■■■    ${boldon}${yellowf}      ■■■■■   ${boldon}${bluef}       ■■■■■     ${boldon}${purplef}     ■■■■■    ${boldon}${reset}
+${redf}     ■     ■   ${greenf}     ■     ■   ${yellowf}     ■     ■   ${bluef}     ■     ■    ${purplef}    ■     ■   ${reset}
+${redf}    ■■ ■■■■■■  ${greenf}    ■■ ■■■■■■  ${yellowf}    ■■ ■■■■■■  ${bluef}    ■■ ■■■■■■   ${purplef}   ■■ ■■■■■■  ${reset}
+${redf}   ■■       ■■ ${greenf}   ■■       ■■ ${yellowf}   ■■       ■■ ${bluef}   ■■       ■■  ${purplef}  ■■       ■■ ${reset} 
 
 EOF
