@@ -48,7 +48,7 @@ Layout=$(setxkbmap -print | awk -F"+" '/xkb_symbols/{for ( i=1; i <= NF; i++) su
  echo -e "\e[94m    | \e[39m$SHELL"
  echo -e "\e[94m    | \e[39m$RESOLUTION"
  echo -e "\e[94m    | \e[39m$CPU"
- #echo -e "\e[94m   | \e[39m$GPU"
+ #echo -e "\e[94m    | \e[39m$GPU"
  echo -e "\e[91m   --------------------"
  echo -e "\e[91m    | \e[31m$DE"
  echo -e "\e[94m    | \e[39m$GtkTheme"
