@@ -63,7 +63,11 @@ echo "##########################################################################
 echo "REMOVALS"
 echo "###############################################################################"
 echo
-echo "None"
+echo "###############################################################################"
+echo "Removing sublime-text-dev and replacing later with sublime-text-4"
+echo "###############################################################################"
+echo
+function_remove sublime-text-dev
 echo
 echo "###############################################################################"
 echo "INSTALLATIONS"
@@ -75,6 +79,7 @@ echo "We have added alacritty and created a configuration pacakage for it"
 echo "###############################################################################"
 echo
 sudo pacman -S --noconfirm --needed alacritty arcolinux-alacritty-git
+sudo pacman -S --noconfirm --needed sublime-text-4
 echo
 echo "###############################################################################"
 echo "WE WILL NO LONGER USE RELEASE NUMBERS IN /ETC/LSB-RELEASE"
