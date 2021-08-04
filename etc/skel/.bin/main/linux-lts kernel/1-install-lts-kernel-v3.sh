@@ -32,7 +32,12 @@ if pacman -Qi $package &> /dev/null; then
 else
 
 	#checking which helper is installed
-	if pacman -Qi yay &> /dev/null; then
+	if pacman -Qi paru &> /dev/null; then
+
+		echo "Installing with paru"
+		paru -S --noconfirm $package
+
+	elif pacman -Qi yay &> /dev/null; then
 
 		echo "Installing with yay"
 		yay -S --noconfirm $package
@@ -40,7 +45,7 @@ else
 	elif pacman -Qi trizen &> /dev/null; then
 
 		echo "Installing with trizen"
-		trizen -S --noconfirm --noedit  $package
+		trizen -S --noconfirm --noedit $package
 
 	fi
 
