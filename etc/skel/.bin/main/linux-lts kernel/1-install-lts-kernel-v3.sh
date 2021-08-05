@@ -37,10 +37,10 @@ else
 		echo "Installing with yay"
 		yay -S --noconfirm $package
 
-	elif pacman -Qi trizen &> /dev/null; then
+	elif pacman -Qi paru &> /dev/null; then
 
-		echo "Installing with trizen"
-		trizen -S --noconfirm --noedit  $package
+		echo "Installing with paru"
+		paru -S --noconfirm   $package
 
 	fi
 
