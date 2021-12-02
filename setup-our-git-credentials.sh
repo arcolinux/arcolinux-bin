@@ -42,7 +42,7 @@
 project=$(basename `pwd`)
 githubdir="arcolinux"
 echo "-----------------------------------------------------------------------------"
-echo "this is project https://github.com/arcolinux/"$project
+echo "this is project https://github.com/$githubdir/$project"
 echo "-----------------------------------------------------------------------------"
 
 echo
