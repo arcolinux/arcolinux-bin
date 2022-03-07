@@ -27,14 +27,18 @@ SigLevel = Optional TrustedOnly
 Server = https://erikdubois.github.io/$repo/$arch' | sudo tee -a /etc/pacman.conf
 fi
 
+# first get the database in before unselecting the lines underneath
+# remove the "#" on the next line
+
 #sudo pacman -Sy
 
-#sudo pacman -S --noconfirm --needed arcolinux-candy-beauty-arc-git
-#sudo pacman -S --noconfirm --needed arcolinux-candy-beauty-arc-mint-grey-git
-#sudo pacman -S --noconfirm --needed arcolinux-candy-beauty-arc-mint-red-git
-#sudo pacman -S --noconfirm --needed arcolinux-candy-beauty-tela-git
-#sudo pacman -S --noconfirm --needed papirus-dark-tela-git
-#...
+#sudo pacman -S --noconfirm --needed edu-candy-beauty-arc-git
+#sudo pacman -S --noconfirm --needed edu-candy-beauty-arc-mint-grey-git
+#sudo pacman -S --noconfirm --needed edu-candy-beauty-arc-mint-red-git
+#sudo pacman -S --noconfirm --needed edu-candy-beauty-tela-git
+#sudo pacman -S --noconfirm --needed edu-papirus-dark-tela-git
+#sudo pacman -S --noconfirm --needed edu-papirus-dark-tela-grey-git
+#sudo pacman -S --noconfirm --needed edu-vimix-dark-tela-git
 
 echo "################################################################"
 echo "################### done"
