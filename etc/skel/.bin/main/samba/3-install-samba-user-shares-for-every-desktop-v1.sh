@@ -73,13 +73,13 @@ if pacman -Qi thunar &> /dev/null; then
         echo
         ;;
       1 )
-        sudo pacman -S --noconfirm --needed thunar-shares-plugin
+        sudo pacman -S --noconfirm --needed arcolinux-thunar-shares-plugin
         ;;
       2 )
         sudo pacman -S --noconfirm --needed thunar-shares-plugin
         ;;
       3 )
-        sudo pacman -S --noconfirm --needed thunar-shares-plugin
+        sudo pacman -S --noconfirm --needed thunar-shares-plugin-git
         ;;
       * )
         echo "#################################"
