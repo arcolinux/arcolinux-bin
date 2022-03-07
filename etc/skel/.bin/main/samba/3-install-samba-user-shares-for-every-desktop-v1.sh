@@ -52,7 +52,42 @@ if pacman -Qi dolphin &> /dev/null; then
   sudo pacman -S --noconfirm --needed kdenetwork-filesharing
 fi
 if pacman -Qi thunar &> /dev/null; then
-  sudo pacman -S --noconfirm --needed thunar-shares-plugin
+
+  echo "Select what package you would like to install"
+
+  echo "0.  Do nothing"
+  echo "1.  ArcoLinux-thunar-shares-plugin - PREFERRED"
+  echo "2.  Default thunar-shares-plugin"
+  echo "3.  Default thunar-shares-plugin-git"
+  echo "Type the number..."
+
+  read CHOICE
+
+  case $CHOICE in
+
+      0 )
+        echo
+        echo "########################################"
+        echo "We did nothing as per your request"
+        echo "########################################"
+        echo
+        ;;
+      1 )
+        sudo pacman -S --noconfirm --needed thunar-shares-plugin
+        ;;
+      2 )
+        sudo pacman -S --noconfirm --needed thunar-shares-plugin
+        ;;
+      3 )
+        sudo pacman -S --noconfirm --needed thunar-shares-plugin
+        ;;
+      * )
+        echo "#################################"
+        echo "Choose the correct number"
+        echo "Nothing installed - install manually"
+        echo "#################################"
+        ;;
+    esac
 fi
 
 file="/etc/samba/smb.conf"
