@@ -12,7 +12,7 @@
 ##################################################################################################################
 
 echo "Do not just run this. Examine and judge. Run at own risk."
-echo "This script will remove the linux-lts if you have it installed."
+echo "This script will remove the linux-lts and its headers."
 echo
 echo "Press enter to continue"; read dummy;
 
@@ -58,9 +58,7 @@ else
 
 fi
 
-
 package="linux-lts-headers"
-
 
 #----------------------------------------------------------------------------------
 
@@ -101,7 +99,6 @@ else
 
 fi
 
-
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-echo "Now reboot"
+echo "Reboot now"
