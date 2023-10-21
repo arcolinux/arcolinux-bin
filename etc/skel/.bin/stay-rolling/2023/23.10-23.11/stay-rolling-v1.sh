@@ -58,7 +58,8 @@ echo "SPECIALITIES"
 echo "###############################################################################"
 echo
 echo "Adding GTK_THEME=Arc-Dark to /etc/environment"
-echo "GTK_THEME=Arc-Dark" | sudo tee -a /etc/environment
+echo "
+GTK_THEME=Arc-Dark" | sudo tee -a /etc/environment
 echo
 echo "###############################################################################"
 echo "REMOVALS"
