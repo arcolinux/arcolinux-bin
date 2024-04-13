@@ -31,6 +31,24 @@ installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
 
 ##################################################################################################################
 
+tput setaf 3
+echo "We will apply these settings"
+echo
+echo "THEME='Arc-Dark'"
+echo "ICONS='a-candy-beauty-icon-theme'"
+echo "FONT='Noto Sans 11'"
+echo "CURSOR='Bibata-Modern-Ice'"
+echo "SCHEMA='gsettings set org.gnome.desktop.interface'"
+tput sgr0
+echo
+read -p "Do you want to continue? (Y/y) " -n 1 -r
+echo    # move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo "Continuing..."
+
+
+
 THEME='Arc-Dark'
 ICONS='a-candy-beauty-icon-theme'
 FONT='Noto Sans 11'
@@ -160,3 +178,7 @@ echo "Font     : "$FONT
 echo "Cursor   : "$CURSOR
 echo "################################################################"
 tput sgr0
+
+else
+    echo "No changes. Exiting..."
+fi
